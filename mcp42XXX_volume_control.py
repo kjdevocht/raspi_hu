@@ -15,7 +15,7 @@ current_volume = [0]
 while True:
     m = audio.Mixer('PCM')
     
-    resistor_output = 255 - round((current_volume[0]/100)*255)
+    resistor_output = 255-round((2.5*(4*math.sqrt(x))/100*255))
     if old_output != resistor_output:
         print('resistor_output ',resistor_output)
         print('current_volume ',current_volume[0])
